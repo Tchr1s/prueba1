@@ -345,6 +345,7 @@
     </section>
 
     <!--contact form-->
+    <?php include("correo.php")?>
     <!-- form-control, form-label,form-select,input-group,input-group-text -->
     <section id="contact">
         <div class="container-lg">
@@ -354,7 +355,7 @@
             </div>
             <div class="row justify-content-center my-5">
                 <div class="col-lg-6">
-                    <form action="https://formsubmit.co/csepulveda232001@gmail.com" method="POST">
+                    <form method="POST">
                         <div class="input-group flex-nowrap">
                             <span class="input-group-text">
                                 <i class="bi bi-person-circle" id="nombre"></i>
@@ -378,8 +379,7 @@
                             <textarea class="form-control" name="comentario" placeholder="Comentario" id="comentario" style="height: 100px"></textarea>
                             <label for="floatingTextarea2">comentarios</label>
                         </div>
-                        
-                        <button type="submit">Enviar</button>
+                        <input class="btn btn-primary" type="submit" name="enviar" value="Enviar">
                     </form>
                 </div>
             </div>
