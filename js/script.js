@@ -17,6 +17,7 @@ function handleSubmit(event) {
         body: new FormData(event.target),
     }).then(response => {
         console.log('Formulario enviado', response);
+        event.target.reset()
     }).catch(error => {
         console.error('Error al enviar el formulario', error);
     });
