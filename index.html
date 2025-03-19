@@ -354,7 +354,8 @@
             </div>
             <div class="row justify-content-center my-5">
                 <div class="col-lg-6">
-                    <form method="POST" name="contacto" data-netlify="true" onSubmit="submit">
+                    <form method="POST" name="contacto" data-netlify="true" onSubmit="handleSubmit(event)" data-netlify-honeypot="bot-field">
+                        <input class="d-none" name="bot-field">
                         <div class="input-group flex-nowrap">
                             <span class="input-group-text">
                                 <i class="bi bi-person-circle" id="nombre"></i>
@@ -384,6 +385,23 @@
             </div>
         </div>
     </section>
+    <!--modal confirmacion-->
+    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmationModalLabel">Formulario Enviado</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ¡Gracias por contactarnos! Hemos recibido tu mensaje.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!--get updates / modal trigger-->
     <section class="bg-light">
